@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+    line-height: 1.6;
+}
+header {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+header h1 {
+    margin-bottom: 8px;
+}
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+.add-song-section,
+.playlist-section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+h2 {
+    margin-bottom: 20px;
+}
+#songForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+input,
+select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+input:focus,
+select:focus {
+    outline: 2px solid #555;
+}
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #222;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #444;
+}
+#emptyMessage {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+}
+#playlistContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.song-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fafafa;
+}
+.song-card h3 {
+    margin-bottom: 8px;
+}
+.song-card .artist {
+    color: #666;
+    margin-bottom: 8px;
+}
+.song-info {
+    margin-bottom: 15px;
+}
+.song-actions {
+    display: flex;
+    gap: 8px;
+}
+.song-card.selected {
+    border: 3px solid #222;
+}
+.remove-btn {
+    background-color: #b00020;
+}
+.remove-btn:hover {
+    background-color: #800018;
+}
+@media (max-width: 700px) {
+    #songForm {
+        grid-template-columns: 1fr;
+    }
+    #playlistContainer {
+        grid-template-columns: 1fr;
+    }
+    main {
+        width: 95%;
+    }
+}
